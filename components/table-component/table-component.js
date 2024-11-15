@@ -1,11 +1,11 @@
 new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+  columns: ["User Need", "Design Input", "Design Process"],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"],
+    ["Multiple User Interaction", "Able to interact with each other in the VR", "Users can see and respond to each other’s actions in real time"],
+    ["Mark", "Multiplayer communication to understand each other", "Voice communication features with potential transcription function"],
+    ["Realistic hospital environment", "Realistic hospital equipment and human models used during simulation", "Use existing models available from Code Blue project"],
+    ["NPC Doctor to replace the doctor in the scenario", "Take over certain scenes as doctor role are scripted", "create scripts and responsive triggers for NPC doctor to response at key points"],
+    ["Resuscitation scenario", "Necessary steps that need to be taken by the nurses to continue the scenario to maximize their communication skills", "Each step of the individual nurses would be storyboarded to ensure key task are completed before continuation of scenario"],
   ],
 }).render(document.getElementById("table-1"));
 
