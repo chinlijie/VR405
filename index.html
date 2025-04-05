@@ -36,7 +36,7 @@
 
 <body>
   <div class="content">
-    <h1>VR405 Gen-AI and VR simulations to improve nursing students' clinical reasoning and interprofessional communication skills</h1>
+    <h1>VR405 AI Doctor: Single Player VR Simulation for Code Blue Emergency in Nursing Education</h1>
 
     <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
@@ -49,94 +49,193 @@
     
     <h2> Acknowledgement </h2>
     <p>
-      I would like to express my sincere gratitude to Professor Khoo Eng Tat for his invaluable guidance during project discussions, helping to scope and refine the direction of this project. I would also like to thank the staff from the Immersive Lab, particularly Aiden and Matthew, for their technical support and advice in the development of the Virtual Reality environment.
-    </p>  
+      I would like to express my sincere gratitude to Professor Dr. Khoo Eng Tat for his unwavering support and guidance throughout the entire Final Year Project. His regular weekly meetings, thoughtful feedback, and direction have been instrumental in shaping the development of this project. His emphasis on the importance of design thinking has been invaluable, especially in learning how to interact meaningfully with collaborators to deliver real value in the product development process.    </p>  
     <b&lt;br&gt;>
     <p>
-     Additionally, I am deeply grateful to the Nursing Department, especially Professor Liaw Sok Ying and her team, for their ongoing support. They provided me with relevant research articles and facilitated connections with nursing lecturers Ronel Tan and Nicholas Neo. This collaboration allowed me the invaluable opportunity to observe nursing students performing a Code Blue assessment at the Centre for Healthcare Simulation.      
-    </p> 
-
+      I am also deeply thankful to Mr. Aiden, Mr. Matthew, and the dedicated team at the Immersive Reality Lab for their technical support and generous sharing of resources. Their mentorship enabled me to acquire essential skills in Unity and VR development. I am especially grateful for the opportunity to participate in their Paediatrics Project Immersion, where I gained valuable insight into the product development processes of their ongoing projects.    </p> 
+      <b&lt;br&gt;>
+    <p>
+      I would also like to extend my heartfelt thanks to our nursing partners from the NUS Alice Lee Centre for Nursing Studies, Professor Liaw Sok Ying, Dr. Ronel, Mr. Ronel Tan, and Mr. Nicholas Neo, for their continuous support. Their contributions included sharing research literature, providing the Code Blue scenario script essential for the AI Doctor’s development, offering feedback on prototypes, and helping clarify the project scope during multiple meetings. I am especially grateful for the opportunity to attend the Code Blue Final Assessment at the Centre for Healthcare Simulation, where I observed year 3 nursing students' practical examinations and translated those clinical needs to the scope of the project. 
     <sl-divider></sl-divider>
 
     <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
+    
         <sl-tree-item expanded>
-          <a href="#section-header-1">1. Introduction</a>
+          <a href="#section-1">1. Introduction</a>
+          <sl-tree-item><a href="#section-1-1">1.1 Problem Exploration</a></sl-tree-item>
+          <sl-tree-item><a href="#section-1-2">1.2 Problem Statement</a></sl-tree-item>
+          <sl-tree-item><a href="#section-1-3">1.3 Importance of Nursing Student Competency in Code Blue Situations</a></sl-tree-item>
+          <sl-tree-item><a href="#section-1-4">1.4 Gaps in the Current Solution</a></sl-tree-item>
+          <sl-tree-item><a href="#section-1-5">1.5 Rise of AI Chatbots in Nursing Education</a></sl-tree-item>
         </sl-tree-item>
-
+    
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Problem of Interest </a>
+          <a href="#section-2">2. Project Objectives & Scope</a>
+          <sl-tree-item><a href="#section-2-1">2.1 Project Aim</a></sl-tree-item>
+          <sl-tree-item><a href="#section-2-2">2.2 Scope and Feasibility</a></sl-tree-item>
         </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-3">3. Proposed Solution </a>
-        </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-4">4. Value Proposition </a>
-        </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-5">5. Design Specifications </a>
-        </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-6">6. Initial Prototypes </a>
-          <sl-tree-item>
-            <a href="#sub-section-6-header-1">6.1 Multiplayer Network Room Logic</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-6-header-2">6.2 Game Object Networking </a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-6-header-2">6.3 Network Voice 
-            </a>
-          </sl-tree-item>
-        </sl-tree-item>
-
-        <sl-tree-item expanded>
-          <a href="#section-header-7">7. Future Work </a>
-        </sl-tree-item>
-        
+    
         <sl-tree-item>
-          <a href="#references">8. References</a>
+          <a href="#section-3">3. Value Proposition</a>
         </sl-tree-item>
-
+    
         <sl-tree-item expanded>
-          <a href="#section-header-9">9. Appendix </a>
+          <a href="#section-4">4. Solution Design</a>
+          <sl-tree-item><a href="#section-4-1">4.1 Design Statement</a></sl-tree-item>
+          <sl-tree-item><a href="#section-4-2">4.2 Concept Generation</a></sl-tree-item>
+          <sl-tree-item><a href="#section-4-3">4.3 Storyboarding</a></sl-tree-item>
+          <sl-tree-item expanded>
+            <a href="#section-4-4">4.4 AI Doctor Prototyping</a>
+            <sl-tree-item><a href="#section-4-4-1">4.4.1 First Prototype – AI Doctor Chatbot Web-Based Application</a></sl-tree-item>
+            <sl-tree-item><a href="#section-4-4-2">4.4.2 Scene Iterations of First Prototype</a></sl-tree-item>
+            <sl-tree-item expanded>
+              <a href="#section-4-4-3">4.4.3 Second Prototype – Postman Interface AI Doctor Chatbot</a>
+              <sl-tree-item><a href="#section-4-4-3-1">4.4.3.1 Backend Architecture</a></sl-tree-item>
+              <sl-tree-item><a href="#section-4-4-3-2">4.4.3.2 Testing Using Postman</a></sl-tree-item>
+            </sl-tree-item>
+            <sl-tree-item expanded>
+              <a href="#section-4-4-4">4.4.4 Integration of AI Doctor in Unity</a>
+              <sl-tree-item><a href="#section-4-4-4-1">4.4.4.1 Backend and Frontend Communication</a></sl-tree-item>
+              <sl-tree-item><a href="#section-4-4-4-2">4.4.4.2 Character Switching and Scene Management</a></sl-tree-item>
+              <sl-tree-item><a href="#section-4-4-4-3">4.4.4.3 Visual Enhancements for Realism</a></sl-tree-item>
+              <sl-tree-item><a href="#section-4-4-4-4">4.4.4.4 Final Integration Outcome</a></sl-tree-item>
+            </sl-tree-item>
+          </sl-tree-item>
         </sl-tree-item>
+    
+        <sl-tree-item expanded>
+          <a href="#section-5">5. AI Doctor Features</a>
+          <sl-tree-item><a href="#section-5-1">5.1 Voice Capture and AI Doctor Response</a></sl-tree-item>
+          <sl-tree-item><a href="#section-5-2">5.2 Scene Change and Camera Angle Change</a></sl-tree-item>
+          <sl-tree-item><a href="#section-5-3">5.3 Role Label Highlighting for Visual Clarity</a></sl-tree-item>
+        </sl-tree-item>
+    
+        <sl-tree-item>
+          <a href="#section-6">6. User Testing & Validation</a>
+        </sl-tree-item>
+    
+        <sl-tree-item>
+          <a href="#section-7">7. Future Work</a>
+        </sl-tree-item>
+    
+        <sl-tree-item>
+          <a href="#section-8">8. Conclusion</a>
+        </sl-tree-item>
+    
+        <sl-tree-item>
+          <a href="#section-9">9. References</a>
+        </sl-tree-item>
+    
+        <sl-tree-item>
+          <a href="#section-10">10. Appendix</a>
+          <sl-tree-item><a href="#section-10-1">Appendix A: Code Blue Script from Nursing School</a></sl-tree-item>
+          <sl-tree-item><a href="#section-10-2">Appendix B: VR Storyboard</a></sl-tree-item>
+          <sl-tree-item><a href="#section-10-3">Appendix C: Project Timeline</a></sl-tree-item>
+        </sl-tree-item>
+    
       </sl-tree>
     </div>
+    
 
     <sl-divider></sl-divider>
     <div>
       <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
+      <div id="section-1">
         <h2> 1. Introduction </h2>
-        <p>
-          Effective interprofessional communication among healthcare professionals is essential for patient health and recovery in hospital settings. Nurses, in particular, play a vital role in identifying and managing patient deterioration, as they are often the first to observe changes in patients' vital signs. Early intervention by the nursing team significantly enhances patient outcomes by reducing the risk of morbidity, shortening hospital stays, and improving the overall quality of care [1].
-        </p>
-        <b&lt;br&gt;>
-        <p>
-          Despite the presence of early warning systems, such as routine monitoring and assessment of physiological parameters by nurses, accurately predicting patient deterioration remains challenging, as it can occur unexpectedly [2]. Therefore, nurses must be thoroughly trained and prepared to respond to patient deterioration by confidently assessing the patient, initiating a code blue response, and communicating effectively with other team members to manage the situation.
-        </p>
+        <div id="section-1-1">
+          <h3>1.1 Problem Exploration</h3>
+          <p>
+            In the first semester of our Final Year Project (FYP), we identified a critical gap in nursing education, where undergraduate nursing students often lack sufficient opportunities to develop effective communication skills for managing patient deterioration before graduation. This gap is primarily due to limited exposure during clinical rotations. During my observation of Year 3 nursing students’ Code Blue practical examination, we noted that students are assigned specific roles, such as primary nurse, airway nurse, and documentation nurse, and are expected to thoroughly understand all four nursing roles in the Code Blue procedure.
+          </p>
+          <b&lt;br&gt;></b>
+          <p>
+            In these assessments, students engage with standardised patients (actors) and are evaluated by nursing lecturers, such as Dr. Ronel, who also assumes the role of a physician during the simulation. However, after discussions with Dr. Ronel, it became evident that students have limited opportunities for practice before the examination due to resource-intensive setup requirements, scheduling limitations, and the need for staff support. Initially, our project proposed building a multiplayer VR environment for Code Blue training. After consultations with Professor Khoo and the simulation team, we pivoted our focus toward creating more accessible and scalable training opportunities. Our revised direction aims to provide students with pre-exam preparation via a single-player VR simulation where they can repeatedly practice Code Blue scenarios guided by an AI-powered virtual doctor.
+          </p>
+        </div>
+        <div id="section-1-2">
+          <h3>1.2 Problem Statement</h3>
+          <p>
+            Despite receiving simulation-based instruction and theoretical knowledge, nursing students often struggle to confidently retain and apply Code Blue procedures due to a lack of immersive, hands-on practice. This gap becomes especially critical before their practical assessments, where timely, role-specific execution is vital. This project aims to address the lack of individualised, self-directed emergency response training by introducing a single-player VR simulation featuring an AI doctor, enabling students to independently rehearse Code Blue scenarios in a safe and repeatable environment.
+          </p>
+        </div>
+        <div id="section-1-3">
+          <h3>1.3 Importance of Nursing Student Competency in Code Blue Situations</h3>
+          <p>
+            Clinical deterioration is defined as the onset of symptoms that may progress to shock, respiratory failure, or cardiopulmonary arrest. It is vital that nursing students are equipped to recognise and respond to these early signs promptly. Timely intervention by nurses can significantly reduce morbidity, mortality, and the need for ICU admission [1]. Studies show that structured "just-in-time" training—where only essential, case-relevant information is provided—enhances nurses’ ability to assess deterioration and make appropriate referrals, directly impacting patient safety [1].
+          </p>
+          <b&lt;br&gt;></b>
+          <p>
+            Learning about clinical deterioration ideally occurs in real-life clinical settings. However, nursing students may not always encounter such situations during placements, making simulation an essential alternative. Simulation-based education allows nursing students to experience high-pressure scenarios in a controlled environment, facilitating both skill acquisition and confidence building [2].
+          </p>
+        </div>
+        <div id="section-1-4">
+          <h3>1.4 Gaps in the Current Solution</h3>
+          <p>
+            Although both mannequin-based and virtual simulations have been shown to improve nursing students’ skills in patient assessment, deterioration management, and structured communication using the ABCDE and SBAR frameworks [3][4], current training methods remain limited. Nursing schools commonly use high-fidelity mannequins and tabletop discussions, where students verbally rehearse protocols. While useful for theoretical reinforcement, these methods lack the dynamic, real-time interaction required in Code Blue situations.
+          </p>
+          <b&lt;br&gt;></b>
+          <p>
+            Students typically study the questions and expected answers in advance, which supports factual recall but does not prepare them for real-world scenarios where they must give recommendations, question team decisions, or recognise errors. Practice with peers is more easily scheduled than with faculty, but these sessions often lack scenario variability and the unpredictability of actual clinical cases. The breadth of potential Code Blue triggers means students cannot realistically be exposed to all possibilities in their limited practice time.
+          </p>
+          <b&lt;br&gt;></b>
+          <p>
+            Simulation-based learning helps students internalise emergency protocols and develop clinical judgment under pressure. Virtual simulations, in particular, allow for repeated, self-paced practice, which promotes long-term retention [3]. Compared to mannequin-based simulations, virtual platforms are more scalable and flexible, offering a sustainable model for refresher training [3].
+          </p>
+          <b&lt;br&gt;></b>
+          <p>
+            Students who train with virtual simulations report reduced anxiety, improved decision-making, and greater confidence in managing emergencies—all of which contribute to safer and more effective real-life Code Blue responses [2]. Integrating virtual simulation into nursing curricula ensures that all students, regardless of clinical placement variations, receive consistent exposure to emergency training, thereby promoting equitable preparedness [1].
+          </p>
+        </div>
+        <div id="section-1-5">
+          <h3>1.5 Rise of AI Chatbots in Nursing Education</h3>
+          <p>
+            The landscape of nursing education is evolving with the integration of artificial intelligence (AI), driven by the need for scalable, accessible, and learner-centric training tools. ChatGPT, a large language model developed by OpenAI, is emerging as a powerful tool to enhance personalised learning, simulate clinical reasoning, and improve critical thinking among nursing students [5]. AI chatbots like ChatGPT provide on-demand, 24/7 access to educational content, allowing learners to study at their own pace and revisit complex topics in natural language form [5].
+          </p>
+          <b&lt;br&gt;></b>
+          <p>
+            Studies show that virtual simulations improve student performance and boost self-confidence in managing clinical deterioration, offering a strong foundation for expanding the role of AI tools in training [2]. Students who used simulation-based tools reported less anxiety, better prioritisation skills, and improved autonomy in patient care decisions—benefits that AI chatbots like ChatGPT can continue to support [2].
+          </p>
+          <b&lt;br&gt;></b>
+          <p>Crucially, AI tools must not replace the humanistic elements of nursing education. A balanced, hybrid approach that combines technology with interpersonal skill development is essential to preserve the compassion and empathy at the core of nursing [5]. As AI becomes more integrated into academic curricula, research has highlighted the need for standardised guidelines and further investigation into effective implementation strategies [6]. ChatGPT has already gained global traction with over 180 million users, signalling its potential as a transformative tool in health education [6].Simulation-based learning helps students internalise emergency protocols and develop clinical judgment under pressure. Virtual simulations, in particular, allow for repeated, self-paced practice, which promotes long-term retention [3]. Compared to mannequin-based simulations, virtual platforms are more scalable and flexible, offering a sustainable model for refresher training [3].
+          </p>
+        </div>
       </div>
     </div>
     
     <sl-divider></sl-divider>
     <div>
-      <div id="section-header-2">
-        <h2>2. Problem of Interest </h2>
-        <p>
-          Nursing students often lack sufficient exposure and learning opportunities to develop effective communication skills for managing patient deterioration before graduation. Their clinical experience is typically limited to rotations, which do not guarantee encounters with live deterioration cases [2]. Additionally, there is a lack of effective, integrated training between different healthcare groups, such as doctors and nurses, which is essential to prevent adverse patient outcomes. Effective communication during resuscitation in patient deterioration is key to ensuring patient safety [3]. Studies indicate that pre-registration nursing students often graduate with adequate theoretical knowledge but are not fully prepared to handle rapid patient deterioration in practice. This gap may stem from challenges in integrating theoretical knowledge with practical competency during classroom simulations, where lack of active engagement reduces learning effectiveness [4].
-        </p>
-        <b&lt;br&gt;>
-        <p>
-          The current curriculum for nursing students relies on mannequin simulations for resuscitation (code blue) cases, with nursing professors acting as facilitators and sometimes filling roles such as that of a doctor to teach different nursing responsibilities. However, this approach has significant limitations, including high resource demands. Simulations require trained facilitators, costly equipment, and dedicated facilities, which restrict learning to small groups and limit opportunities for repetitive practice. These constraints affect long-term retention, a crucial element in mastering resuscitation skills [5].
-        </p>
-        <image-component tag="image" source="assets/mannequin.png"
+      <div id="section-2">
+        <h2>2.  Project Objectives & Scope</h2>
+        <div id="section-2-1">
+          <h3>2.1 Project Aim</h3>
+          <p>
+            The objective of this project is to design and develop a single-player, AI-powered virtual reality (VR) simulation that enables undergraduate nursing students to independently practice their responses during Code Blue emergency scenarios. This simulation tool is intended to help students better prepare for their Year 3 practical examinations as well as future clinical practice by enhancing their confidence, communication, and decision-making skills in high-pressure situations.
+          </p>
+          <b&lt;br&gt;>
+          <p>
+            The project addresses the current lack of accessible, hands-on simulation opportunities that nursing students face due to limited clinical exposure and the resource-intensive nature of traditional mannequin-based simulations. By providing a flexible, repeatable, and immersive learning platform, the project aims to bridge this critical gap in nursing education.
+          </p>
+          <b&lt;br&gt;>
+          <p>
+            In the broader context, this VR simulation also has the potential to be used by practicing nurses as a just-in-time (JIT) training tool. It can serve as a refresher for less common or complex Code Blue scenarios and support continuous professional development through scenario-based learning.
+          </p>
+        </div>
+        <div id="section-2-2">
+          <h3>2.2 Scope and Feasibility</h3>
+          <p>
+            The scope of this project includes the creation of a virtual hospital ward environment where nursing students can assume the role of a nurse and engage with an AI-generated doctor to simulate Code Blue situations. The VR system will be built using Unity and developed in collaboration with the Virtual Immersion Lab, which has prior experience in creating simulation-based training solutions. For example, their cabin air crew training project shares similar communication and emergency response dynamics and provides a strong technical foundation for this project.          
+          </p>
+          <b&lt;br&gt;>
+          <p>
+            Key features of the simulation will include a variety of realistic Code Blue scenarios, real-time feedback and prompts from the AI doctor, and repeated practice opportunities to strengthen clinical decision-making and procedural accuracy. The use of preprogrammed algorithms and natural language responses will allow the AI doctor to simulate dynamic team interactions and provide feedback to the learner. This project is technically feasible within the current resources and timeline and addresses an urgent educational need in nursing training.          
+          </p>
+        </div>
+      
+        
+        <!--<image-component tag="image" source="assets/mannequin.png"
           subtitle="High Fidelity Mannequin Simulation"></image-component>
         <b&lt;br&gt;>
         <p>
@@ -160,123 +259,393 @@
     </div>
     
     <sl-divider></sl-divider>
-    <div id="section-header-3">
-      <h2> 3. Proposed Solution </h2>
+    <div id="section-3">
+      <h2>3. Value Proposition</h2>
       <p>
-        The Resuscitation Virtual Reality Scenario with Code Blue Training is designed to simulate a hospital "Code Blue" emergency, providing an immersive multiplayer training environment for nursing students. This VR scenario replicates the high-pressure setting of patient deterioration to facilitate the development of interprofessional communication, team coordination, and rapid decision-making skills.      
+        This project offers a unique and scalable solution for undergraduate nursing students who need more hands-on practice and confidence in handling Code Blue situations. These students often struggle to access traditional simulations due to scheduling constraints, staffing limitations, and the high costs associated with running in-person, mannequin-based training.
       </p>
       <b&lt;br&gt;>
       <p>
-        Key features of this VR training solution includes multiplayer interaction where nursing students are able to practice various roles within the resuscitation team, enabling them to understand each role's responsibilities and to experience teamwork in a realistic, interactive environment. Additionally, a voice transcription function where communication within the scenario is recorded and transcribed, allowing students and facilitators to review conversations afterward. This feature is designed to help identify areas for improvement in communication and collaboration skills.      
-      </p>
+        The VR simulation tool provides a fully immersive, AI-guided learning experience that allows students to practice independently at any time. Unlike traditional role-play sessions or lab-based simulations, this solution does not require supervision by faculty members or access to physical equipment. It enables consistent exposure to varied clinical scenarios and helps standardise training quality across learners, regardless of their clinical placement experiences.
+      <p>
+      <b&lt;br&gt;>
+      <p>
+        By offering a safe and controlled environment for repeated practice, the VR simulation enhances long-term retention of emergency protocols, reduces anxiety, and increases students’ confidence in responding to real-life deterioration cases. It also supports the future integration of artificial intelligence into clinical training, setting a foundation for innovative and learner-centred nursing education.
+      <p>  
     </div>
 
     <sl-divider></sl-divider>
-    <div id="section-header-4">
-      <h2> 4. Value Proposition </h2>
-      <p>
-        The proposed VR training solution enables nursing students to achieve the learning outcome of effectively managing high-stress patient deterioration scenarios. Through immersive practice, students improve their interprofessional communication and coordination skills, which are critical for handling real-life emergencies. Additionally, this VR platform offers facilitators the flexibility to conduct simulations more frequently, fostering proactive student participation and enhancing learning engagement.    
-      </p>
-    </div>
+    <div id="section-4">
+      <h2>4. Design Specification</h2>
 
-    <sl-divider></sl-divider>
-    <div id="section-header-5">
-      <h2> 5. Design Specifications </h2>
-      <p>
-      </p>
-      <table-component subtitle="">
-        <div id="table-1"></div>
-      </table-component>
-    </div>
-
-    <sl-divider></sl-divider>
-    <div id="section-header-6">
-      <h2> 6. Initial Prototypes </h2>
-      <p>
-        The prototyping phase focuses on testing the core functionalities outlined in the design specifications. This includes developing and validating key systems required for multiplayer interaction, game object networking, and voice communication within the VR environment.    
-      </p>
-
-      <div id="sub-section-6-header-1">
-        <h3>6.1 Multiplayer Network Room Logic </h3>
+      <div id="section-4-1">
+        <h3>4.1 Design Statement</h3>
         <p>
-          The multiplayer networking functionality is tested using the Photon Pun 2 SDK, which enables the creation and management of multiplayer rooms. The NetworkManager script is responsible for creating the rooms over the network, allowing users to join and participate in multiplayer sessions. To ensure that each participant can be represented within the virtual environment, the NetworkPlayer script spawns avatars for each user, allowing them to have a visual presence in the room. Additionally, the NetworkPlayerSpawner script facilitates the process of adding players to the networked room, ensuring that each user is seamlessly integrated into the multiplayer scenario.
+          This project aims to develop a single-player virtual reality (VR) simulation that enables undergraduate nursing students to independently practice Code Blue emergency response scenarios. The simulation addresses the training gap caused by limited access to high-fidelity simulations and real-world clinical exposure. Designed primarily for third-year nursing students preparing for practical examinations, the tool integrates an AI-guided doctor within a scenario-rich environment that supports repeated, self-paced practice without faculty supervision.         
         </p>
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/6.1.1.png"
-          subtitle="Network Player Scripts"></image-component>
-        </br> 
-        <image-component tag="image" source="assets/6.1.2.png"
-          subtitle="Network Manager and Network Player Spawner Scripts"></image-component>  
+        <b&lt;br&gt;>
+        <p>
+          The system is designed to emphasise medical realism, accessibility, and structured learning, allowing students to strengthen their clinical decision-making, boost confidence, and improve retention of emergency procedures. Ultimately, the simulation seeks to offer a scalable and flexible training platform that can also serve as just-in-time (JIT) refresher training for practicing nurses in atypical or complex Code Blue scenarios.        
+        </p>
       </div>
 
-      <div id="sub-section-6-header-2">
-        <h3>6.2 Game Object Networking </h3>
+      <div id="section-4-2">
+        <h3>4.2 Concept Generation</h3>
         <p>
-          In order for each player to interact with objects and see the actions of other players in the networked environment, object networking is implemented. The XR Grab Network Interactable component enables players to grab and manipulate objects within the simulation, with their actions synchronized across all participants. To ensure that objects move consistently and smoothly for all users, the Photon Rigidbody View component is used, which synchronizes the object’s motion over the network. Additionally, the Photon View component manages the ownership of these objects, allowing objects to be transferred between players, ensuring that the correct player controls the relevant object during the simulation.
+          Initial concept development was guided by consultations with engineers from the Immersive Reality Lab and Professor Khoo. These discussions were informed by earlier meetings with nursing school lecturers who highlighted the challenges faced by students in adequately preparing for Code Blue situations.         
         </p>
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/6.2.png"
-          subtitle="Game Object Networking Scripts"></image-component>
+        <b&lt;br&gt;>
+        <p>
+          Currently, nursing students rely primarily on paper-based learning modules and written assessments to test their theoretical knowledge. While effective for reinforcing foundational concepts, these methods lack the interactivity and real-time communication dynamics necessary in actual Code Blue emergencies. To address this gap, the project explored a transition from static content toward a more interactive web-based experience—ultimately evolving into a VR-based simulation.       
+        </p>
+        <b&lt;br&gt;>
+          <p>
+            The envisioned solution is a dialogue-driven, immersive VR experience in which students practice realistic scenarios by engaging in role-based interactions with an AI doctor. This approach aims to challenge students to apply clinical knowledge, make rapid decisions, and communicate effectively under pressure, thus mirroring the dynamics of real-world emergencies and supporting deeper learning.       
+          </p>
       </div>
 
-      <div id="sub-section-6-header-3">
-        <h3>6.3 Network Voice </h3>
+      <div id="section-4-3">
+        <h3>4.3 Storyboarding</h3>
         <p>
-          To enable voice communication between players in the VR simulation, the Network Voice Client is implemented. This allows participants to communicate in real-time during the scenario. The functionality for voice transcription is planned for future integration, enabling the capture and review of communication for training purposes.
+          The nursing school provided a detailed Code Blue scenario (Appendix A), including a sequence of events, nurse role scripts, ideal responses from the AI doctor, and guiding principles for assessing student performance. This scenario also included patient background information and the trigger conditions for initiating a Code Blue response.        
         </p>
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/6.3.png"
-          subtitle="Photon Network Voice"></image-component>
+        <image-component tag="image" source="assets/figure1.png"
+        subtitle="Figure 1: Part of the Code Blue Script provided by NUS Nursing School"></image-component>
+        <p>
+          The simulation involves four distinct nursing roles: Charge Nurse, Circulation Nurse, Compression Nurse, and Airway Nurse. Each role has its own set of responsibilities and performance criteria, as outlined in the guiding principles. During the second prototyping phase, the project team worked with nursing faculty to storyboard the VR flow based on these scripts. The storyboard ensures that each nurse’s interaction aligns with the corresponding learning objectives and clinical requirements.       
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          Figure 2 below illustrates an example of the VR storyboard for the Charge and Circulation Nurse roles. The complete storyboard can be found in Appendix B. Section 4.4.3 explains how these goals are implemented to trigger scene progression within the VR simulation.       
+        </p>
+        <image-component tag="image" source="assets/figure2.jpg"
+         subtitle="Figure 2: Sample storyboard for Charge and Circulation Nurses showing interaction flow and goal milestones"></image-component>
+      </div>
+
+      <div id="section-4-4">
+        <h3>4.4 AI Doctor Prototyping</h3>
+        <p>
+          This section details the development of the AI Doctor chatbot system, beginning with the initial web-based prototype and evolving through prompt engineering and scene iteration. The goal was to simulate realistic Code Blue conversations between nurses and an AI-driven doctor to support self-directed practice in a VR training environment.        
+        </p>
+      </div>
+
+      <div id="section-4-4-1">
+        <h4>4.4.1 First Prototype – AI Doctor Chatbot Web-Based Application</h4>
+        <p>
+          The first prototype of the AI Doctor was implemented as a web-based chatbot application. The initial goal was to simulate the full sequence of the Code Blue scenario provided by the NUS Nursing School using a knowledge-driven chatbot. This chatbot was powered by GPT-4o-mini and accessed via a backend built in Visual Studio Code, which interfaced with a simple web front end. The backend managed prompt inputs while serving responses through the AI model, simulating the behavior of a doctor during an emergency Code Blue resuscitation.       
+        </p>
+        <image-component tag="image" source="assets/figure3.png"
+          subtitle="Figure 3: Web-based chatbot interface for AI Doctor implementation"></image-component>
+        <p>
+          The knowledge input, acting as a structured prompt, was derived from the Code Blue script and condensed to form concise, role-specific information for the AI to use in its replies. On the right-hand panel of the application, the AI Doctor’s response would appear after the user (simulating a nurse) entered their dialogue. These responses were generated dynamically based on the summarised prompt and were meant to replicate the instructional and decision-making communication expected of a physician in a resuscitation scenario.       
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          However, during testing, significant limitations were discovered. As the scenario progressed and additional roles (e.g., Circulation Nurse, Compression Nurse) were introduced, the prompt complexity increased. The AI struggled to distinguish between the various nurse roles when provided with a single consolidated prompt. Even when the user attempted to clarify their role (e.g., “I am the Circulation Nurse”), the AI often misinterpreted this as part of a medical input rather than a change in character, leading to confusing or inappropriate replies.      
+        </p>
+        <image-component tag="image" source="assets/figure4.png"
+         subtitle="Figure 4: AI Doctor's response accuracy visualised against expected output (green = correct, red = error, unhighlighted = incomplete)"></image-component>
+        <p>
+          Further testing revealed that as more information was appended to the prompt to support multiple nurse roles, the AI began to hallucinate or produce medically inaccurate statements. For instance, when prompted to simulate an incorrect doctor instruction (as part of the Error Doctor module), the AI would not only deliver the incorrect instruction but also justify it incorrectly with flawed medical reasoning. This issue likely stemmed from GPT-4o-mini’s limited capability in parsing high-fidelity clinical workflows and maintaining contextual accuracy.       
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          To manage this limitation, the chatbot’s test framework was split into three discrete modules: <li>Knowledge Checker to validate if the AI could deliver role-specific medical knowledge accurately.</li> <li>Error Doctor to test the AI's ability to simulate incorrect instructions and gauge the nurse's ability to respond appropriately.</li> <li>Full Scenario to attempt to run through the entire nurse sequence in one cohesive simulation.</li>
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          During the testing phase, each module was reset before inputting new prompts. The modular testing approach helped isolate where the AI succeeded (typically in static knowledge recall) and where it failed (dynamic role-switching and deliberate error simulation). The Error Doctor module demonstrated persistent issues with the AI asserting incorrect medical guidance confidently, even when the user provided correct objections, showing the GPT-4o-mini model's limitations in probabilistic response generation.
+        </p>
+        <image-component tag="image" source="assets/figure5.png"
+         subtitle="Figure 5: Example of medically inaccurate AI Doctor response with flawed rationale during Error Doctor simulation"></image-component>
+        <p>
+          These insights informed the decision to transition to a more capable model (GPT-4) in the next prototype. This shift was essential to achieve higher fidelity in role-based simulation, better control of AI behaviour, and more consistent alignment with clinical protocols outlined by the nursing school.
+        </p>
+      </div>
+
+      <div id="section-4-4-2">
+        <h4>4.4.2 Scene Iterations of First Prototype</h4>
+        <p>
+          To simulate accurate, role-specific dialogue in a Code Blue scenario, several prompt engineering strategies were tested using GPT-4o-mini. This process aimed to ensure clinical realism, appropriate interprofessional communication, and structured decision-making consistent with the Code Blue protocols and the nursing school’s script. The AI Doctor was expected to respond to each nurse's role appropriately, handle SBAR-based communication, and present deliberate clinical challenges to assess student understanding.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          The table below summarises the prompt strategies, goals, results, and challenges across three iterations of prompt design:
+        </p>
+        <table-component subtitle="">
+           <div id="table-1"></div>
+        </table-component>
+        <p>
+          These iterations revealed critical limitations in GPT-4o-mini’s understanding of clinical procedures. Despite prompt refinements and contextual detail, the AI consistently produced inaccurate medical guidance and struggled with dynamic role-based conversation. These results highlighted the need for larger, more context-aware language models and modular scene-specific prompting to ensure safe, effective training outcomes in the VR environment.
+        </p>
+       </div>
+      
+      <div id="section-4-4-3">
+        <h4>4.4.3 Second Prototype – Postman Interface AI Doctor Chatbot</h4>
+        <p>
+          Due to the limitations encountered with the GPT-4o-mini model—especially its inability to handle error testing and sequential scene progression—the project transitioned to a more capable model: GPT-4. The second prototype was developed with this upgraded language model and included several architectural refinements to improve accuracy and role-based response fidelity.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          One of the major improvements in this version was the restructuring of the backend script. A new scene_prompts.json was created to modularise and individualise the knowledge prompts for each nurse role, in contrast to the single-block prompt used in the first prototype. This allowed for better role specificity and reduced confusion within the AI model. A total of six distinct scenes were implemented, each corresponding to a segment in the Code Blue script provided by the NUS Nursing School: S.1: Charge Nurse, S.2: Circulation Nurse, S.3: Compression Nurse, S.4: Circulation Nurse (second entry), S.5: Airway Nurse, S.6: Ending scene.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          Each scene contains tailored prompts and specific goals aligned with that nurse’s responsibilities. These goals serve as checkpoints to determine whether the nurse’s input meets the necessary criteria for scene progression.
+        </p>
+      </div>
+
+      <div id="section-4-4-3-1">
+        <h5>4.4.3.1 Backend Architecture</h5>
+        <p>
+          Figure 5 below shows the updated Python backend, where the scene.prompts.json file is integrated into the knowledge processing pipeline. This configuration enables the chatbot to retrieve targeted responses based on the current scene and nurse role.
+        </p>
+        <image-component tag="image" source="assets/figure6.png"
+         subtitle="Figure 6: Updated Knowledge Backend Script with scene_prompts.json"></image-component>
+      </div>
+
+      <div id="section-4-4-3-2">
+        <h5>4.4.3.2 Testing Using Postman</h5>
+        <p>
+          To test each scene individually, the Postman API testing tool was used as an intermediary before Unity integration. Within Postman, nurse inputs were sent to the chatbot endpoint, and the AI Doctor responses were evaluated for both content accuracy and alignment with the provided goals with justification.
+        </p>
+        <image-component tag="image" source="assets/figure7.png"
+         subtitle="Figure 7: Testing Scene-Based Responses in Postman"></image-component>
+        <p>
+          The GPT-4 model demonstrated significantly improved output. It was now capable of responding accurately to role-specific inputs, recognising scene context, and aligning with the structured script. Furthermore, the AI Doctor was able to simulate intentional medical errors when prompted in the Error Doctor scenes. However, several refinements were necessary to ensure that the AI withheld hints and allowed the nursing student to independently identify and respond to these deliberate mistakes. This involved repeated testing and iterative tuning of the prompt phrasing to manage GPT-4's tendency to over-correct or prematurely guide the student.
+        </p>
+        <image-component tag="image" source="assets/figure8.png"
+         subtitle="Figure 8: Highlighted Response Accuracy Based on Scene Prompts (Green = Matched)"></image-component>
+      </div>
+
+      <div id="section-4-4-4">
+        <h4>4.4.4 Integration of AI Doctor in Unity</h4>
+        <p>
+          Following the successful validation of the AI Doctor chatbot using Postman, the next phase involved integrating the backend system into Unity to create an interactive and immersive VR training environment. This integration leveraged a boilerplate project developed by the Immersive Reality Lab, which provided a modular framework for scene transitions, character control, and interface customisation.
+        </p>
+      </div>
+      
+      <div id="section-4-4-4-1">
+        <h5>4.4.4.1 Backend and Frontend Communication</h5>
+        <p>
+          The updated knowledge backend, now powered by GPT-4 and structured through scene_prompts.json, was linked directly to Unity via HTTP requests and JSON messaging. This enabled real-time communication between the AI Doctor and the VR application. Each message sent from the user (i.e., the student in the nurse role) is processed by the backend AI, which then returns a structured response, including the assistant's dialogue, scene ID, goal status, and more.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          The AI response is then parsed using Unity scripts (SimpleMicStreamInstance and SimpleConvoaiJsonParser), which direct it to the relevant UI components, trigger scene transitions, and update dialogue labels.
+        </p>
+        <image-component tag="image" source="assets/figure9.png"
+         subtitle="Figure 9: Integration of knowledge backend chatbot (on the right) to the Boilerplate (on the left)"></image-component>
+      </div>
+      
+      <div id="section-4-4-4-2">
+        <h5>4.4.4.2 Character Switching and Scene Management</h5>
+        <p>
+          The boilerplate included character-switching logic, which was adapted to align with the Code Blue training sequence. As each scene progresses, Unity automatically updates the camera angles and the active nurse avatar, guided by the scene ID returned from the AI Doctor’s JSON response. This ensures that the correct nurse role is displayed and that the user transitions seamlessly through the predefined training stages.
+        </p>
+        <image-component tag="image" source="assets/figure10.png"
+         subtitle="Figure 10: Scene Switching Between Nurse Roles via Backend Response to the Boilerplate (on the left)"></image-component>
+        <p>
+          Scene transitions are fully automated, eliminating the need for manual input or UI buttons. This design choice streamlines the user experience and maintains immersion by reflecting real-world emergency response conditions where transitions between roles occur fluidly.
+        </p>
+      </div>
+
+      <div id="section-4-4-4-3">
+        <h5>4.4.4.3 Visual Enhancements for Realism</h5>
+        <p>
+          To enhance realism and support immersion, 3D models of male and female surgeons were purchased from the Reallusion Asset Store. These models were selected for their compatibility with Unity’s animation system and included features such as facial rigging and lip-sync capabilities, which were essential for depicting the AI Doctor. Additionally, a hospital room asset package was integrated to simulate a realistic clinical environment.
+        </p>
+        <image-component tag="image" source="assets/figure11.png"
+         subtitle="Figure 11: Final AI Doctor Prototype in a hospital room"></image-component>
+        <p>
+          These visual improvements not only add to the authenticity of the training scenario but also help nursing students engage more meaningfully with the simulation. By placing them in a familiar environment with realistic character models and behaviours, the learning experience becomes more relatable and effective.
+        </p>
+      </div>
+
+      <div id="section-4-4-4-4">
+        <h5>4.4.4.4 Final Integration Outcome</h5>
+        <p>
+          After successful integration and internal testing, the AI Doctor in Unity was able to deliver responses aligned with the Code Blue script, transition smoothly between nurse roles, and operate within a fully immersive hospital setting. The system's ability to dynamically respond to voice inputs, change scenes, and simulate medical dialogue with visual feedback positions it as a scalable, self-directed training tool.
+        </p>
+        <image-component tag="image" source="assets/figure12.png"
+         subtitle="Figure 12: Final Integrated Scene with AI Doctor Responding in Unity"></image-component>
+        <b&lt;br&gt;>
+        <video-component tag="rick" source="https://youtu.be/iE1_fwBNn90"
+         subtitle="AI Doctor Demonstration"></video-component>
       </div>
     </div>
 
     <sl-divider></sl-divider>
-    <div id="section-header-7">
-      <h2> 7. Future Work </h2>
+    <div id="section-5">
+      <h2>5. AI Doctor Features</h2>
+
+      <div id="section-5-1">
+        <h3>5.1 Voice Capture and AI Doctor Response</h3>
+        <p>
+          The AI Doctor system is driven by real-time voice capture integrated with Microsoft Azure Cognitive Services Speech SDK. The STTManager_clean.cs script manages audio input detection through the user's microphone and transcribes spoken input into text via Azure's speech-to-text service. Once transcription is completed, the resulting sentence is packaged and transmitted to the backend AI server (ConvoAI) using SimpleMicStreamInstance.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          The AI response, structured in JSON format, includes a set of fields such as message (containing the doctor's dialogue), agent_role, scene_number, and other metadata. This response is parsed through SimpleConvoaiJsonParser.cs, which decodes the AI's output for use in the simulation.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          Text-based responses are then converted to speech using Azure Text-to-Speech services. This synthesis is managed by AudioStreamInstance.cs, which plays the AI Doctor’s dialogue through the assigned audio source in Unity, producing natural and contextually appropriate voice feedback for the student
+        </p>
+        <image-component tag="image" source="assets/figure13.png"
+         subtitle="Figure 13: Audio Pipeline – Voice Input to AI Response via Azure Services"></image-component>
+      </div>
+
+      <div id="section-5-2">
+        <h3>5.2 Scene Change and Camera Angle Change</h3>
+        <p>
+          To support dynamic role transitions throughout the Code Blue sequence, the parsed JSON includes a scene_number field which triggers camera repositioning and perspective changes. This mechanism is critical for simulating nurse role-switching and maintaining situational awareness during scenario progression.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          Scene management is handled by Unity’s camera control system, wherein each role-specific camera position is registered under the CameraTransformTargets object, located within the ClinicScene < Environment hierarchy. These targets are referenced in the MultiCharController component and assigned to each corresponding role’s scene ID.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          Upon receiving a new scene number, the camera automatically transitions to the designated target using predefined smooth motion paths, allowing the user to adopt the correct perspective for the active nurse role.
+        </p>
+        <image-component tag="image" source="assets/figure14.png"
+         subtitle="Figure 14: Camera Scene Transform Targets and Scene Change Triggers"></image-component>
+        <p>
+          This fully automated system ensures a seamless training flow, eliminating reliance on manual UI elements or user-triggered navigation, which could interrupt cognitive immersion.
+        </p>
+      </div>
+
+      <div id="section-5-3">
+        <h3>5.3 Role Label Highlighting for Visual Clarity</h3>
+        <p>
+          To aid in orientation and clarity during multi-role training, each character (four nurses and the AI Doctor) is labeled with a dynamic header. These headers use a color-changing mechanism to indicate which character is currently active in the simulation.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          The AI Doctor’s label changes from white to green during audio playback (via AudioStreamInstance), signaling that the doctor is speaking. Conversely, when the student (in the role of a nurse) is speaking, the corresponding nurse’s label is highlighted in green, based on the current scene ID parsed from the backend.
+        </p>
+        <b&lt;br&gt;>
+        <p>
+          This implementation leverages Unity’s UI label components, controlled by LabelUIController.cs, which listens to both audio playback triggers and role-switch signals to adjust label states accordingly.
+        </p>
+        <image-component tag="image" source="assets/figure15.png"
+         subtitle="Figure 15: Role Header Label Colour Change Triggered by Audio Playback and Scene Parsing"></image-component>
+        <p>
+          This visual feedback system reduces cognitive load by clearly indicating role transitions and active dialogue sources, thereby supporting focused learning and reducing user confusion in complex, scenario-rich environments.
+        </p>
+      </div>
+    </div>
+
+    <sl-divider></sl-divider>
+    <div id="section-6">
+      <h2>6. User Testing & Validation</h2>
       <p>
-        The next steps for this project will involve several critical activities aimed at finalizing and improving the training experience. First, we will collaborate with the nursing school to finalize the resuscitation scenarios through storyboarding, ensuring that all key steps and roles are accurately represented for the training simulation. Following this, the Code Blue VR Project will be created using the existing pediatric project template, with necessary adaptations made to suit the specific requirements of resuscitation training scenarios.
+        The AI Doctor Prototype was demonstrated to the School of Nursing at E2A Studio 5 on 2 April 2025. The full Code Blue scenario was showcased in sequence, simulating the interactions between the nursing roles and the AI Doctor. Overall, the demonstration was well-received. Nursing partners acknowledged the clinical relevance of the simulation and provided constructive feedback to improve the user experience, particularly for single-player role transitions.
+      </p>
+      <table-component subtitle="Feedback and Corresponding Improvements">
+        <div id="table-2"></div>
+     </table-component>
+
+    </div>
+
+    <sl-divider></sl-divider>
+    <div id="section-7">
+      <h2>7. Future Work </h2>
+      <p>
+        Future improvements to the system will build on current feedback and target broader use cases
       </p>
       <b&lt;br&gt;>
       <p>
-        Additionally, user testing will be conducted to gather valuable feedback from participants, which will help identify areas for improvement and guide any necessary iterations of the project. Finally, a detailed project timeline outlining the sequence of steps required for completion is provided in Appendix A for reference, which will help track the project's progress and ensure all milestones are met on schedule.
+        Single-Player Focused Mode <br> A streamlined version of the simulation is in consideration, focused on the "Charge Nurse" role. In this mode, the player interacts directly with the AI Doctor and delegates tasks to AI-controlled nurse NPCs. Each NPC’s behavior and responses will be scripted in context to the Charge Nurse’s decisions and spoken inputs.
+      </p>
+      <b&lt;br&gt;>
+      <p>
+        Enhanced Procedural Animations <br> The next phase includes realistic procedural animations to improve immersion during interactions, such as CPR compressions, intubation, and medication administration. These animations aim to bridge the gap between visual feedback and verbal cues in the VR environment.
+      </p>
+    </div>
+
+    <sl-divider></sl-divider>
+    <div id="section-8">
+      <h2>8. Conclusion</h2>
+      <p>
+        The AI Doctor prototype is a beginner-friendly training tool developed to support nursing students in practicing the full Code Blue scenario. It reinforces understanding of standardised resuscitation procedures and algorithms while intentionally excluding variations such as dosage adjustments tailored to individual patient conditions. By simulating realistic medical emergencies, the prototype allows students to explore and experience various nursing roles within a resuscitation team.
+      </p>
+      <b&lt;br&gt;>
+      <p>
+        This simulation also promotes the development of critical thinking skills, especially when students are required to identify and respond to deliberate errors made by the AI Doctor. These purposeful inaccuracies are embedded to encourage learners to apply their knowledge actively rather than passively follow instructions.
+      </p>
+      <b&lt;br&gt;>
+      <p>
+        A key objective of the AI Doctor prototype is to enhance team communication. The system achieves this by enabling immersive, self-guided practice that mirrors the dynamics of interprofessional collaboration during Code Blue situations. Another central goal is to supplement formal learning by providing a structured yet flexible environment in which students can internalise the resuscitation algorithm before participating in hands-on, high-fidelity simulations.
+      </p>
+      <b&lt;br&gt;>
+      <p>
+        Overall, the AI Doctor prototype bridges the gap between theoretical instruction and practical application. It offers a safe and engaging platform for learners to build confidence, improve communication, and deepen their understanding of emergency response protocols. Future developments will focus on increasing interactivity, enhancing procedural realism, and expanding support for both single-player and multi-user training experiences.
       </p>
     </div>
 
     <sl-divider></sl-divider><!-- This is an example of how you can use the references component to create references -->
-    <div id="references" class="references">
-      
-      <h2>8. References</h2>
+    <div id="section-9">
+      <h2>9. References</h2>
       <ul>
         <li>
-          [1] Lourenço L, Meszaros M, Silva M, São-João T. (2023). Nursing Training for Early Clinical Deterioration Risk Assessment: Protocol for an Implementation Study. JMIR Res Protoc 2023;12:e47293. URL: https://www.researchprotocols.org/2023/1/e47293. DOI: 10.2196/47293
+          [1] Lourenço, L. B. de A., Meszaros, M. J., Silva, M. F. N., & São-João, T. M. (2023). Nursing training for early clinical deterioration risk assessment: Protocol for an implementation study. Journal of Medical Internet Research, 25, e47293. https://doi.org/10.2196/47293
         </li>
         <li>
-          [2] Goldsworthy S, Muir N, Baron S, Button D, Goodhand K, Hunter S, McNeill L, Perez G, McParland T, Fasken L, Peachey L. (2022). The impact of virtual simulation on the recognition and response to the rapidly deteriorating patient among undergraduate nursing students. Nurse Education Today, Volume 110, 2022, 105264, ISSN 0260-6917. https://doi.org/10.1016/j.nedt.2021.105264.
+          [2] Goldsworthy, S., et al. (2022). The impact of virtual simulation on the recognition and response to the rapidly deteriorating patient among undergraduate nursing students. Nurse Education Today, 113, 105386. https://doi.org/10.1016/j.nedt.2022.105386
         </li>
         <li>
-          [3] Liaw SY, Ooi SL, Mildon R, Ang ENK, Lau TC, Chua WL. (2022). Translation of an evidence-based virtual reality simulation-based interprofessional education into health education curriculums: An implementation science method Nurse Education Today, Volume 110, 2022, 105262, ISSN 0260-6917. https://doi.org/10.1016/j.nedt.2021.105262.
+          [3] Liaw, S. Y., et al. (2014). Comparison of virtual patient simulation with mannequin-based simulation for improving clinical performances in assessing and managing clinical deterioration: Randomized Controlled Trial. Journal of Medical Internet Research, 16(9), e214. https://doi.org/10.2196/jmir.3322
         </li>
         <li>
-          [4] Sapiano AB, Sammut R, Trapani J. (2018).The effectiveness of virtual simulation in improving student nurses' knowledge and performance during patient deterioration: A pre and post test design. Nurse Education Today, Volume 62, 2018, Pages 128-133, ISSN 0260-6917. https://doi.org/10.1016/j.nedt.2017.12.025.
+          [4] Liaw, S. Y., Rethans, J. J., Scherpbier, A., & Klainin-Yobas, P. (2011). Rescuing a patient in deteriorating situations (RAPIDS): A simulation-based educational program. Resuscitation, 82(9), 1224–1230. https://doi.org/10.1016/j.resuscitation.2011.04.014
         </li>
         <li>
-          [5] Liaw SY, Chan SW, Chen FG, Hooi SC, Siau C. Comparison of virtual patient simulation with mannequin-based simulation for improving clinical performances in assessing and managing clinical deterioration: randomized controlled trial. J Med Internet Res. 2014 Sep 17;16(9):e214. PMID: 25230684; PMCID: PMC4180357. doi: 10.2196/jmir.3322
+          [5] Liu, H., et al. (2023). ChatGPT in nursing education: A scoping review. Nurse Education Today, 126, 105994. https://doi.org/10.1016/j.nedt.2023.105994
         </li>
         <li>
-          [6] Pottle J. (2019). Virtual reality and the transformation of medical education. Future Healthcare Journal, Volume 6, Issue 3, 2019, Pages 181-185, ISSN 2514-6645. https://doi.org/10.7861/fhj.2019-0036.
-        </li>
-        <li>
-          [7] Shorey S, Ng ED. (2021). The use of virtual reality simulation among nursing students and registered nurses: A systematic review, Nurse Education Today, Volume 98, 2021, 104662, ISSN 0260-6917. https://doi.org/10.1016/j.nedt.2020.104662.
+          [6] Gunawan, J., Aungsuroch, Y., & Montayre, J. (2024). ChatGPT integration within nursing education and its implications for nursing students: A systematic review and text network analysis. Nurse Education Today, 141, 106323. https://doi.org/10.1016/j.nedt.2024.106323
         </li>
       </ul>
     </div>
   </div>
 
   <sl-divider></sl-divider>
-  <div id="section-header-9">
-    <h2> 9. Appendix </h2>
-    <image-component tag="image" source="assets/Appendix A.png"
-    subtitle="Appendix A: Timeline"></image-component>
+  <div id="section-10">
+    <h2> 10. Appendix </h2>
+
+    <div id = "section-10-1"> 
+      <h3>Appendix A: Code Blue Script from Nursing School</h3>
+      <image-component tag="image" source="assets/appendixa1.jpg"
+       subtitle=""></image-component>
+      <image-component tag="image" source="assets/appendixa2.jpg"
+       subtitle=""></image-component>
+      <image-component tag="image" source="assets/appendixa3.jpg"
+       subtitle=""></image-component> 
+      <image-component tag="image" source="assets/appendixa4.jpg"
+       subtitle=""></image-component> 
+    </div>
+
+    <div id = "section-10-2"> 
+      <h3>Appendix B: VR Storyboard</h3>
+      <image-component tag="image" source="assets/appendixb1.jpg"
+       subtitle=""></image-component>
+      <image-component tag="image" source="assets/appendixb2.jpg"
+       subtitle=""></image-component>
+      <image-component tag="image" source="assets/appendixb3.jpg"
+       subtitle=""></image-component> 
+      <image-component tag="image" source="assets/appendixb4.jpg"
+       subtitle=""></image-component> 
+    </div>
+
+    <div id = "section-10-3"> 
+      <h3>Appendix C: Project Timeline</h3>
+      <image-component tag="image" source="assets/appendixc.png"
+       subtitle=""></image-component>
+    </div>
+
+    
   </div>
 
 
